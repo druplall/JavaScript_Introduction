@@ -60,3 +60,5 @@ let greetingArrow = () => {
 
 let message2 = greetingArrow();
 console.log(message2);
+
+//Test
