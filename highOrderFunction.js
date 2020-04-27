@@ -16,8 +16,29 @@ function map(array, addLetter) {
   return copy;
 }
 
-let myArray = ["A", "B", "C"];
+//let myArray = ["A", "B", "C"];
 //console.log(addLetter("DEO"));
-let temp = map(myArray, addLetter);
-console.log(temp);
+//let temp = map(myArray, addLetter);
+//console.log(temp);
 //console.log(map(myArray, addLetter("D")));
+
+// Higher Order function the forEach
+
+let arr = [1, 2, 3, 4, 5];
+let result = arr.forEach((number, index) => {
+  return (arr[index] = number * 2);
+});
+
+console.log(arr);
+
+function forEach(arr, callback) {
+  for (var i = 0; i < arr.length; i++) {
+    callback(arr[i], i, arr);
+  }
+
+  return arr;
+}
+
+forEach(["one", "two", "three"], function (val, index, arr) {
+  console.log(val, index, arr);
+});
